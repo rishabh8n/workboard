@@ -47,13 +47,13 @@ function App() {
     if (search) {
       const searchRes = {
         todo: taskObject.todo.filter((task) =>
-          task.content.toLowerCase().includes(search)
+          task.content.toLowerCase().includes(search.toLocaleLowerCase())
         ),
         progress: taskObject.progress.filter((task) =>
-          task.content.toLowerCase().includes(search)
+          task.content.toLowerCase().includes(search.toLocaleLowerCase())
         ),
         done: taskObject.done.filter((task) =>
-          task.content.toLowerCase().includes(search)
+          task.content.toLowerCase().includes(search.toLocaleLowerCase())
         ),
       };
       setSearchRes(searchRes);
